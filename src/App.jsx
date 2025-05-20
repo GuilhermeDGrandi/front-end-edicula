@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, } from "react-router-dom";
 import Header from "./components/Header";
-import Home from './pages/Home'
 import GlobalStyles from "./Styles/GlobalStyles";
+import RoutesApp from './routes'
 
 
 
@@ -9,11 +9,9 @@ import GlobalStyles from "./Styles/GlobalStyles";
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
-    <GlobalStyles/>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-    </Routes>
+      <Header/>
+      <GlobalStyles/>
+      <RoutesApp/>
     </BrowserRouter>
   );
 }

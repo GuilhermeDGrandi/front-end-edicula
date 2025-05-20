@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-padding:0%;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 60px;  
+  gap: 8px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
 `

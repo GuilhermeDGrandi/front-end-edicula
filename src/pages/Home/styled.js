@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   max-width: 1200px;
@@ -45,7 +46,7 @@ export const Description = styled.div`
   line-height: 1.6;
 `;
 
-export const CalendarButton = styled.div`
+export const CalendarButton = styled(Link)`
 
     .button {
   align-items: center;

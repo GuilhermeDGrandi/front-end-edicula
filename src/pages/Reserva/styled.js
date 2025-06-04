@@ -1,5 +1,12 @@
-import styled from "styled-components";
-
+import styled, {createGlobalStyle} from "styled-components";
+export const GlobalStyle = createGlobalStyle`
+  .unavailable-day {
+    background-color: #ff4d4d !important;
+    color: white !important;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+`;
 export const Container = styled.div`
 max-width: 600px;
 margin: 0 auto;
@@ -14,11 +21,24 @@ margin-bottom: 2rem;
 
 export const CalendarWrapper = styled.div`
 margin-bottom:2rem;
+
+
 `
 
 export const DateDisplay = styled.p`
 margin-top:1rem;
 `
+export const DatesContainer = styled.div`
+  display:block;
+  margin-left:5px;
+`;
+
+export const CalendarContainer = styled.div`
+ display:flex;
+`
+
+
+
 
 export const Form = styled.form`
 display:flex;
@@ -37,12 +57,14 @@ border: 1px solid #ccc;
 border-radius: 4px;
 `
 
-export const Button = styled.button`
+export const Button = styled.a`
 padding: 0.7rem;
 background:purple;
 color:white;
 border: none;
 border-radius:5px;
+text-align:center;
+text-decoration:none;
 cursor: pointer;
  &:hover{
     background:#5e007e;
@@ -55,6 +77,8 @@ margin-top: 1rem;
   text-align: center;
   font-weight: bold;
 `
+
+
 
 
 

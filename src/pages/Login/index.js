@@ -9,6 +9,8 @@ import{Container, Form, Input, Button, Title, ErrorMessage} from './styled.js'
 export default function Login(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [mode, setMode] = useState("login"); // "login" ou "signup"
+
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -43,7 +45,7 @@ export default function Login(){
 
         <Container>
             <Form onSubmit={handleSubmit} >
-                <Title>Acesso Administrativo</Title>
+                <Title>{mode === 'login' ? 'Login' : 'Criar Conta'}</Title>
                 <Input type="text"
                 placeholder="Usuário"
                 value={email} 
@@ -54,7 +56,7 @@ export default function Login(){
                 value={password} 
                 onChange={(e)=> setPassword(e.target.value)}
                 />
-                {error && <ErrorMessage>{error}</ErrorMessage>}
+                {error && <ErrorMessage>{typeof error === 'string' ? error : error.message || JSON.stringify(error)}</ErrorMessage>}
                 <Button type="submit" disabled={loading}> 
                     {loading ? "Entrando..." : "Entrar"}
                 </Button>
